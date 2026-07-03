@@ -1,6 +1,6 @@
 # Password Strength Checker
 
-A lightweight command-line tool built in C++ that evaluates the strength of a password based on multiple security criteria.
+A lightweight Windows desktop app built in C++ that evaluates the strength of a password based on multiple security criteria.
 
 The program analyzes a password and provides a score along with a strength rating such as **Weak**, **Medium**, or **Strong**.
 
@@ -13,7 +13,9 @@ The program analyzes a password and provides a score along with a strength ratin
 * Detects special characters
 * Calculates a password strength score
 * Classifies passwords as Weak, Medium, or Strong
-* Simple and easy-to-use command-line interface
+* Native Windows GUI
+* Optional password visibility toggle
+* Detailed result panel with improvement suggestions
 
 ## How It Works
 
@@ -50,13 +52,14 @@ Strength: STRONG
 
 * C++
 * Standard Template Library (STL)
-* Command-Line Interface (CLI)
+* Win32 API
+* Native Windows controls
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have a C++ compiler installed, such as GCC or MinGW.
+Make sure you have a C++ compiler installed on Windows, such as MinGW or MSYS2.
 
 ### Clone the Repository
 
@@ -68,22 +71,16 @@ cd password-strength-checker
 ### Compile
 
 ```bash
-g++ main.cpp -o password_checker
+g++ main.cpp -o password_checker -mwindows
 ```
 
 ### Run
 
-On Linux or macOS:
-
-```bash
-./password_checker
-```
-
-On Windows:
-
 ```bash
 password_checker.exe
 ```
+
+The app opens a window where you can enter a password, analyze it, and review the score, strength rating, and suggestions.
 
 ## Project Structure
 
@@ -116,7 +113,7 @@ This project was created to practice fundamental C++ programming concepts, inclu
 * Character analysis
 * Basic input and output
 
-It is a small learning project focused on writing clean logic and building a practical command-line utility.
+It is a small learning project focused on writing clean logic and building a practical desktop utility.
 
 ## Contributing
 
